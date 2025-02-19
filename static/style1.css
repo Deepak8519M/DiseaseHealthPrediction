@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  pointer-events: auto;
+}
+@font-face {
+  font-family: "rejoy";
+  src: url(text/Rejouice-Headline.ttf);
+}
+@font-face {
+  font-family: "nb";
+  src: url(text/NBInternationalProBoo.ttf);
+}
+@font-face {
+  font-family: "new";
+  src: url("text/NeueMachina-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  /* font-family: nb; */
+  font-family: rejoy;
+  position: relative;
+}
+#main {
+  height: auto;
+}
+#cursor {
+  height: 20px;
+  width: 20px;
+  background: #95c11e;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 99;
+  pointer-events: none;
+  /* z-index: 999;  */
+}
+
+#cursor-blur {
+  height: 400px;
+  width: 400px;
+  /* background: #bbff0086; */
+
+  background: #daff06a8;
+  border-radius: 50%;
+  position: absolute;
+  filter: blur(50px);
+  z-index: 9;
+}
+#page1 {
+  width: 100%;
+  height: 100vh;
+  background: #dadada;
+  position: relative;
+}
+#page1 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+#page1-content {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.39);
+  position: relative;
+  z-index: 10;
+  /* color: #95c11e; */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background: red; */
+  padding: 3vw 3vw;
+}
+nav h3 {
+  font-size: 2vw;
+  font-weight: 100;
+  cursor: pointer;
+}
+nav h4 {
+  font-size: 1.6vw;
+  font-weight: 100;
+}
+#page1-content h1 {
+  font-size: 17.5vw;
+  font-weight: 100;
+  line-height: 15vw;
+  letter-spacing: -2vw;
+  /* color: #cdfb03; */
+}
+#page1-content h1 span {
+  font-family: rejoy;
+  display: inline-block;
+}
+#page2 {
+  width: 100%;
+  height: 100vh;
+  background: beige;
+  padding: 6vw 3vw;
+  font-family: nb;
+}
+#page2 .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+#page2 h3 {
+  font-size: 1.7vw;
+  font-weight: 300;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background: black;
+  margin-top: 1.4vw;
+  /* margin: auto; */
+}
+.elem {
+  width: 100%;
+  margin-top: 3vw;
+  position: relative;
+  z-index: 10;
+}
+.elem h1 {
+  font-weight: 300;
+  font-size: 4vw;
+  color: black;
+}
+#page3 {
+  width: 100%;
+  min-height: 100vh;
+  background: black;
+  color: white;
+  position: relative;
+}
+.explore {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2vw;
+  margin-top: 4vw;
+  font-family: nb;
+  z-index: 10;
+  line-height: 5vw;
+}
+.explore span {
+  font-family: nb;
+  color: greenyellow;
+}
+
+.explore h2 {
+  font-size: 4vw;
+  text-align: center;
+}
+#scroller {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 10;
+}
+#scroller-in {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 25s linear infinite;
+}
+#scroller::-webkit-scrollbar {
+  display: none;
+}
+#scroller h4 {
+  display: inline-block;
+  font-family: "Roboto", serif;
+  font-size: 120px;
+  font-weight: bolder;
+  margin-right: 2vw;
+  color: transparent;
+  -webkit-text-stroke: 2px #95c11e;
+  transition: all linear 0.5s;
+}
+#scroller h4:hover {
+  color: #95c11e;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#page4 {
+  width: 100%;
+  height: 100vh;
+  /* background: brown; */
+  background: black;
+  padding: 4vw;
+}
+
+#cards-container {
+  /* background: gold; */
+  width: 98%;
+  height: 98%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.card {
+  height: 80%;
+  width: 30%;
+  background: blue;
+  border-radius: 18px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+#card1 {
+  /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBE_dGkrXCNp3VB9ImFDuU74kvEns3mnM_aA&s"); */
+  /* background-image: url("https://media.istockphoto.com/id/1293132839/photo/human-heart-with-blocked-arteries.jpg?s=612x612&w=0&k=20&c=8IeDMz8kjt0Qn3L5LIuZo26PbO7cZFg5p-LKGU0ToU0="); */
+  /* background-image: url("https://media.istockphoto.com/id/2184027682/vector/cardiology-human-heart-organ-with-stethoscope-medical-checkup-at-hospital-cardiovascular.jpg?s=1024x1024&w=is&k=20&c=6f1Uvvsr2MzuSVJIePbfV40uxKo525oZxuwwJFM78SI="); */
+  background-image: url("https://media.istockphoto.com/id/1187631495/vector/modern-process-heart-inner-organs-disease-treatment-design-concept.jpg?s=612x612&w=0&k=20&c=JXhup5Ke7Tl_Swt4BG0nHUJloy2pC9o79D74IZDQyZE=");
+}
+#card2 {
+  background-image: url("https://media.istockphoto.com/id/1168179082/photo/man-with-brain-stroke-symptoms.jpg?s=612x612&w=0&k=20&c=eYZ9ayO0rR0Su3vN3EU48CxOOnwxUXDgXhpAYb2s7L4=");
+}
+#card3 {
+  /* background-image: url("https://media.istockphoto.com/id/2025691114/photo/healthy-food-and-glucose-meter-diabetes-healthy-lifestyle-and-nutrition-concept.jpg?s=612x612&w=0&k=20&c=QyhmNaPgsJbnKgPf0qDYK68vgENQ2l-QU7IhH8PqvBw="); */
+  /* background-image: url("https://media.istockphoto.com/id/1272421428/vector/diabetes-disease-high-sugar-level-in-blood-tiny-characters-with-glucose-meter-and-insulin.jpg?s=612x612&w=0&k=20&c=dDM_1kMtaO5b4ogyPXKl36tV_6_9b0liz4sEDnDo7UQ="); */
+  background-image: url("https://media.istockphoto.com/id/1203742750/vector/doctor-checking-patient-blood-sugar-level.jpg?s=612x612&w=0&k=20&c=hHZfGYBbsmGtwIYFuDJfqHbkZNU0lanGeRwvxsNxyC4=");
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: #95c11e;
+  padding: 5vw 3vw;
+  font-family: "Roboto", serif;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transition: all ease 0.7s;
+}
+.overlay h4 {
+  color: black;
+  font-size: 3vw;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.overlay p {
+  color: black;
+  margin-top: 1.4vw;
+  font-weight: 300;
+  font-size: 1.3vw;
+}
+.overlay a {
+  list-style: none;
+  cursor: pointer;
+  color: black;
+}
+.overlay i {
+  background: #95c11e;
+  border: 2px solid black;
+  padding: 3.3vw;
+  border-radius: 50%;
+  position: absolute;
+  top: -6%;
+  right: -6%;
+  font-size: 2.5vw;
+  transition: all ease 0.7s;
+}
+
+.overlay i:hover {
+  background: white;
+  color: #95c11e;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+#page6 {
+  width: 100%;
+  height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#page6 p {
+  font-size: 2.3vw;
+  width: 50%;
+  text-align: center;
+  font-weight: 700;
+  font-family: "nb";
+  line-height: 3.2vw;
+  position: relative;
+  z-index: 10;
+}
+#page6 img {
+  position: absolute;
+  height: 60px;
+}
+#page6 #colon1 {
+  left: 15%;
+  top: 25%;
+}
+#page6 #colon2 {
+  bottom: 25%;
+  right: 15%;
+}
+#page7 {
+  width: 100%;
+  height: 100vh;
+  background: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  background: beige;
+}
+#page7 .team {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  background: transparent;
+  border-radius: 50%;
+  width: 13vw;
+  height: 13vw;
+}
+.team h3 {
+  color: white;
+  cursor: pointer;
+}
+
+.names {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  font-family: "Roboto", serif;
+  font-family: nb;
+  letter-spacing: 0.4vw;
+  font-size: 3vw;
+  transition: all ease 0.3s;
+  left: -100%;
+}
+.names h2:hover {
+  color: greenyellow;
+}
+.names i {
+  position: absolute;
+  top: 7%;
+  right: 6%;
+  padding: 1.3vw;
+  background: greenyellow;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.navmenu {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  /* background: greenyellow; */
+  background: #daff06ea;
+  z-index: 11;
+  top: 0;
+  right: -40%;
+  font-family: "Roboto", serif;
+  padding: 8vw 4vw;
+  color: rgb(0, 0, 0);
+}
+.navmenu h3 {
+  font-size: 3.3vw;
+  font-weight: 400;
+  margin-bottom: 0.4vw;
+  cursor: pointer;
+}
+.navmenu i {
+  position: absolute;
+  padding: 2.4vw;
+  background: white;
+  border-radius: 50%;
+  font-size: 1.7vw;
+  top: 5%;
+  right: 10%;
+  cursor: pointer;
+}
+#page8 {
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  position: relative;
+}
+
+#move {
+  background: #d9ff06;
+  font-family: "new";
+  display: flex;
+  padding: 3vw 0;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  color: black;
+}
+.marque {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  padding: 0vw 3vw;
+  /* background: red; */
+  flex-shrink: 0;
+  transform: translateX(-100%);
+}
+#move h1 {
+  font-size: 4vw;
+}
+.marque img {
+  height: 5.9vw;
+}
+#page9 {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}
+
+@media (max-width: 400px) {
+  #page1 .navmenu {
+    display: none;
+  }
+}
+
+#loader {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  background: black;
+  z-index: 99;
+  color: white;
+  gap: 0.5vw;
+}
+#loader h3 {
+  font-size: 2vw;
+  /* font-family: "Nunito", serif; */
+  font-family: "new";
+
+  font-weight: 300;
+}
