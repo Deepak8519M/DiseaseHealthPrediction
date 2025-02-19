@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='heart.css') }}"
+    />
+    <title>Heart Disease Prediction</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h3>Multiple Disease Prediction</h3>
+        <div class="menu-item"><a href="/diabetes">Diabetes Prediction</a></div>
+        <div class="menu-item">
+          <a href="/heart">Heart Disease Prediction</a>
+        </div>
+        <div class="menu-item">
+          <a href="/brain">Brain Disease Prediction</a>
+        </div>
+        <div class="menu-item">
+          <a href="/index1">HOME</a>
+        </div>
+      </div>
+
+      <!-- Main Form -->
+      <div class="maincontent">
+        <h1>Heart Disease Prediction</h1>
+        <form method="POST" action="/predict_heart">
+          <div class="forms">
+            <!-- Row 1 -->
+            <li class="group">
+              <label>AGE</label>
+              <input
+                min="18"
+                max="77"
+                type="number"
+                name="Age"
+                placeholder="Enter Age"
+                required
+              />
+            </li>
+            <li class="group">
+              <label>GENDER</label>
+              <select name="Sex" required>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+              </select>
+            </li>
+            <li class="group">
+              <label>CHEST PAIN TYPE</label>
+              <select name="ChestPainType" required>
+                <option value="Typical">Typical Angina</option>
+                <option value="Atypical">Atypical Angina</option>
+                <option value="Non-anginal">Non-Anginal Pain</option>
+                <option value="Asymptomatic">Asymptomatic</option>
+              </select>
+            </li>
+            <li class="group">
+              <label>RESTING BP</label>
+              <input
+                min="0"
+                max="200"
+                type="number"
+                name="RestingBP"
+                placeholder="Enter Resting BP"
+                required
+              />
+            </li>
+
+            <!-- Row 2 -->
+            <li class="group">
+              <label>CHOLESTEROL</label>
+              <input
+                min="0"
+                max="350"
+                type="number"
+                name="Cholesterol"
+                placeholder="Enter Cholesterol"
+                required
+              />
+            </li>
+            <li class="group">
+              <label>FASTING BS</label>
+              <select name="FastingBS" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
+            </li>
+            <li class="group">
+              <label>RESTING ECG</label>
+              <select name="RestingECG" required>
+                <option value="Normal">Normal</option>
+                <option value="Abnormal">Abnormal</option>
+                <option value="Hypertrophy">
+                  Left Ventricular Hypertrophy
+                </option>
+              </select>
+            </li>
+            <li class="group">
+              <label>MAX HR</label>
+              <input
+                min="60"
+                max="195"
+                type="number"
+                name="MaxHR"
+                placeholder="Enter Max HR"
+                required
+              />
+            </li>
+
+            <!-- Row 3 -->
+            <li class="group">
+              <label>EXERCISE ANGINA</label>
+              <select name="ExerciseAngina" required>
+                <option value="Y">Yes</option>
+                <option value="N">No</option>
+              </select>
+            </li>
+            <li class="group">
+              <label>OLD PEAK</label>
+              <input
+                min="0"
+                max="6"
+                type="number"
+                step="0.1"
+                name="Oldpeak"
+                placeholder="Enter Old Peak"
+                required
+              />
+            </li>
+            <li class="group">
+              <label>ST SLOPE</label>
+              <select name="ST_Slope" required>
+                <option value="Up">Upsloping</option>
+                <option value="Flat">Flat</option>
+                <option value="Down">Downsloping</option>
+              </select>
+            </li>
+          </div>
+
+          <button type="submit">Predict</button>
+        </form>
+
+        <!-- Display Prediction Result -->
+        {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>

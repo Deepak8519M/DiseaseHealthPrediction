@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://www.rejouice.com/assets/favicon/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style1.css') }}"
+    />
+  </head>
+  <body>
+    <div id="loader">
+      <h3>Expereince</h3>
+      <h3>Our,</h3>
+      <h3>Website®️</h3>
+    </div>
+    <div id="main">
+      <div id="cursor"></div>
+      <div id="cursor-blur"></div>
+      <div id="page1">
+        <div class="navmenu">
+          <h3>HOME</h3>
+          <h3>Services</h3>
+          <h3>About Us</h3>
+          <h3>Contact Us</h3>
+          <h3>Support</h3>
+          <h3>
+            <form action="/login" method="get" style="display: inline">
+              <button
+                type="submit"
+                style="
+                  background: none;
+                  border: none;
+                  color: inherit;
+                  font: inherit;
+                  cursor: pointer;
+                "
+              >
+                Login
+              </button>
+            </form>
+          </h3>
+          <i class="ri-close-large-line"></i>
+        </div>
+        <video autoplay muted loop src="../static/video1.mp4"></video>
+        <div id="page1-content">
+          <nav>
+            <h3>AiGenIx</h3>
+            <h3 id="menut">Menu</h3>
+          </nav>
+          <h1>
+            <span>W</span>
+            <span>E</span>
+            <span>L</span>
+            <span>C</span>
+            <span>O</span>
+            <span>M</span>
+            <span>E</span>
+          </h1>
+        </div>
+      </div>
+      <div id="page2">
+        <div class="text">
+          <h3>Empowering Health, Beyond Boundaries.</h3>
+          <h3>AiGenIx / India</h3>
+        </div>
+        <div class="line"></div>
+        <div class="elem">
+          <h1>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We use cutting-edge
+            technology and AI to transform health data into predictive insights,
+            empowering individuals and healthcare providers with the tools to
+            prevent and manage diabetes, heart stroke, and brain stroke. Your
+            health, your choice.
+          </h1>
+        </div>
+      </div>
+      <div id="page3">
+        <div id="scroller">
+          <div id="scroller-in">
+            <h4>About Us</h4>
+            <h4>Contact Us</h4>
+            <h4>Our Models</h4>
+            <h4>Support Team</h4>
+            <h4>Services</h4>
+          </div>
+          <div id="scroller-in">
+            <h4>About Us</h4>
+            <h4>Contact Us</h4>
+            <h4>Models</h4>
+            <h4>Support Team</h4>
+            <h4>Services</h4>
+          </div>
+        </div>
+
+        <div class="explore">
+          <h2>Explore Our <span>Well Crafted </span> Prediction Models</h2>
+        </div>
+      </div>
+      <div id="page4">
+        <div id="cards-container">
+          <div class="card" id="card1" data-tilt>
+            <div class="overlay">
+              <a href="{{ url_for('heart') }}"
+                ><i class="ri-arrow-right-line"></i
+              ></a>
+              <h4>Heart Attack</h4>
+              <p>
+                Expereince Our welly crafted Heart Prediction Model that could
+                Predict your chances of having an heart Attack
+              </p>
+            </div>
+          </div>
+          <div class="card" id="card2" data-tilt>
+            <div class="overlay">
+              <a href="{{ url_for('brain') }}"
+                ><i class="ri-arrow-right-line"></i
+              ></a>
+              <h4>Brain Stroke</h4>
+              <p>
+                Expereince Our welly crafted Heart Prediction Model that could
+                Predict your chances of having an Brain Stroke
+              </p>
+            </div>
+          </div>
+          <div class="card" id="card3" data-tilt>
+            <div class="overlay">
+              <a href="{{ url_for('diabetes') }}"
+                ><i class="ri-arrow-right-line"></i
+              ></a>
+              <h4>Diabatees</h4>
+              <p>
+                Expereince Our welly crafted Heart Prediction Model that could
+                Predict your chances of having an Diabatees
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="page6">
+        <p>
+          He who has health, has hope; and he who has hope, has everything.
+          Early to bed and early to rise makes a man healthy, wealthy and wise.
+          Health is not valued till sickness comes.
+        </p>
+        <img src="../static/TopQuote.svg" alt="" id="colon1" />
+        <img src="../static/BtmQuote.svg" alt="" id="colon2" />
+      </div>
+      <div id="page7">
+        <video
+          loop
+          muted
+          autoplay
+          src="https://www.rejouice.com/assets/videos/RJ-BALL-BLUE-ORANGE-scaled.webm"
+        ></video>
+        <div class="team">
+          <h3>Our Team</h3>
+        </div>
+
+        <div class="names">
+          <h2>DINESH</h2>
+
+          <h2>UDAY</h2>
+          <h2>DEEPAK</h2>
+          <i class="ri-close-large-line"></i>
+        </div>
+      </div>
+
+      <div id="page8">
+        <div class="content8">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa illum
+          vero aperiam similique? Tenetur culpa cum, numquam ut, qui quibusdam
+          velit fugit veritatis eos minima quia obcaecati quis deserunt
+          explicabo!
+        </div>
+        <div id="move">
+          <div class="marque">
+            <h1>Explore More Models</h1>
+            <img
+              src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg"
+              alt=""
+            />
+          </div>
+          <div class="marque">
+            <h1>Explore More Models</h1>
+            <img
+              src="https://www.brandium.nl/wp-content/uploads/2022023/07/arrow-br.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div id="page9">
+        <h3>Footer Under Construction</h3>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="../static/vanilla-tilt.js"></script>
+    <script src="../static/app.js"></script>
+
+    <!-- Chatbot Integration -->
+    <script>
+      window.embeddedChatbotConfig = {
+        chatbotId: "KED0vDa_2_DURbgYait3d",
+        domain: "www.chatbase.co",
+      };
+    </script>
+    <script
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="KED0vDa_2_DURbgYait3d"
+      domain="www.chatbase.co"
+      defer
+    ></script>
+  </body>
+</html>

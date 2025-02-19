@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="heart.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='heart.css') }}"
+    />
+    <title>DISEASE PREDICTION</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h3>Multiple Disease Prediction</h3>
+        <div class="menu-item"><a href="/diabetes">Diabetes Prediction</a></div>
+        <div class="menu-item">
+          <a href="/heart">Heart Disease Prediction</a>
+        </div>
+        <div class="menu-item">
+          <a href="/brain">Brain Stroke Prediction</a>
+        </div>
+        <div class="menu-item">
+          <a href="/index1">HOME</a>
+        </div>
+      </div>
+
+      <!-- Main Form -->
+      <div class="maincontent">
+        <h1>DIABETIES PREDICTION</h1>
+
+        <!-- Diabetes Form -->
+        <div id="diabetes-form">
+          <form method="POST" action="/predict_diabetes">
+            <div class="forms">
+              <li class="group">
+                <label>PREGNANCIES</label>
+                <input
+                  min="0"
+                  max="15"
+                  type="number"
+                  name="Pregnancies"
+                  placeholder="Enter number of pregnancies"
+                  required
+                />
+              </li>
+              <li class="group">
+                <label>GLUCOSE</label>
+                <input
+                  min="0"
+                  max="200"
+                  type="number"
+                  name="Glucose"
+                  placeholder="Enter glucose level"
+                  required
+                />
+              </li>
+              <li class="group">
+                <label>BloodPressure</label>
+                <input
+                  min="0"
+                  max="120"
+                  type="number"
+                  name="BloodPressure"
+                  placeholder="Enter blood pressure"
+                  required
+                />
+              </li>
+              <li class="group">
+                <label>SkinThickness</label>
+                <input
+                  min="0"
+                  max="100"
+                  type="number"
+                  name="SkinThickness"
+                  placeholder="Enter skin thickness"
+                  required
+                />
+              </li>
+              <li class="group">
+                <label>INSULIN</label>
+                <input
+                  min="0"
+                  max="250"
+                  type="number"
+                  step="0.1"
+                  name="Insulin"
+                  placeholder="Enter insulin level"
+                  required
+                />
+              </li>
+              <li class="group">
+                <label>BMI</label>
+                <input
+                  min="0"
+                  max="68"
+                  type="number"
+                  step="0.1"
+                  name="BMI"
+                  placeholder="Enter BMI"
+                  required
+                />
+              </li>
+              <li class="group">
+                <label>DIABETES PEDIGREE FUNCTION</label>
+                <input
+                  min="0.078"
+                  max="2.42"
+                  type="number"
+                  step="0.01"
+                  name="DiabetesPedigreeFunction"
+                  placeholder="Enter diabetes pedigree function"
+                  required
+                />
+              </li>
+              <li class="group">
+                <label>AGE</label>
+                <input
+                  min="18"
+                  max="88"
+                  type="number"
+                  name="Age"
+                  placeholder="Enter age"
+                  required
+                />
+              </li>
+            </div>
+            <button type="submit">Predict Diabetes</button>
+          </form>
+        </div>
+
+        <!-- Display Prediction Results -->
+        {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
