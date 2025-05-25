@@ -41,7 +41,7 @@ python app.py
 Open your browser and go to **http://127.0.0.1:5000/** to use the application.
 
 ## Usage Guide
-1. **Sign up / Log in** to access the system.
+1. **Sign up / Log in** to access the system. (few changes need to be made to the UI)
 2. Select a prediction model (**Heart, Diabetes, or Brain Disease**).
 3. Enter your health details.
 4. Click "Predict" to get your health risk assessment.
