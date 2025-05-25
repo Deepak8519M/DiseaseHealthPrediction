@@ -13,7 +13,7 @@ The **Health Prediction System** is a web application that helps users assess th
 - **Secure & Private**: User data is protected and used only for predictions.
 
 ## Tech Stack
-- **Frontend**: HTML, CSS, JavaScript , Gsap , Locomotive Js , Tilt Js 
+- **Frontend**: HTML, CSS, JavaScript , Gsap , Locomotive Js , Tilt.Js 
 - **Backend**: Flask (Python)
 - **Machine Learning Models**: scikit-learn, pandas, NumPy
 - **Database**: SQLite (or any preferred database for user management)
